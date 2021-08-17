@@ -53,6 +53,9 @@ Alternatively, you can add a udev rule or something similar.
     kobuddy.backup.setup_parser(bp)
 
     args = p.parse_args()
+    if args.mode is None:
+        p.print_usage()
+        exit()
 
     if args.mode == 'backup':
         kobuddy.backup.run(args)
