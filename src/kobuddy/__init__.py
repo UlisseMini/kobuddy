@@ -804,6 +804,21 @@ def _iter_events_aux_AnalyticsEvents(*, row, books: Books) -> Iterator[Event]:
             'AutoColorToggled',
             'WifiSettings',
             'WifiToggle',
+
+            # Added because of "Unhandled entry" error
+            'OrientationLock',
+            'LibraryTabSelected',
+            'ItemDetail',
+            'GryoStuck',
+            'ChangeSort',
+            'OpenCollection',
+            'ChangeSort',
+            'NaturalLightAdjusted',
+            'AccessWishlist',
+            'StoreFeaturedListFilter',
+            'SyncReminder',
+            'MarkAsFinishedPrompt',
+            'OverDriveAccessAbout',
     ):
         pass # just ignore
     elif tp in (
