@@ -606,6 +606,12 @@ def _iter_events_aux_Event(*, row, books: Books, idx=0) -> Iterator[Event]:
 
 
     lengths = {
+        # Fix from https://github.com/karlicoss/kobuddy/issues/10#issuecomment-864503474
+        b'Orientation'               : 5,
+        b'Portrait'                  : 0,
+        b'Landscape'                 : 0,
+        b'ButtonPressCount'          : 9,
+
         b'ExtraDataSyncedCount'      : 9,
         b'PagesTurnedThisSession'    : 9,
         b'IsMarkAsFinished'          : 6,
